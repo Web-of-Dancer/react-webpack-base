@@ -9,7 +9,9 @@ export default class About extends React.Component {
   }
   render() {
     return(
-      <div>{this.state.message}</div>
+      <div>
+        <h2>{ this.state.message }</h2>
+      </div>
     )
   }
 }

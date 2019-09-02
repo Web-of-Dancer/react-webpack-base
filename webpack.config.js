@@ -39,7 +39,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 20000,
+              limit: 40000,
               outputPath: 'images',
             }
           }
@@ -96,7 +96,7 @@ module.exports = {
     // 设置服务器访问的基本目录
     contentBase: path.resolve(__dirname,'dist'), //最好设置成绝对路径
     // 启动的服务端口
-    port: 8000,
+    port: 3333,
     // 通过localhost或IP进行访问
     host: 'localhost',
     // 若编译过程中有错误，显示到网页上,便于定位错误
