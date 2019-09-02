@@ -1,8 +1,7 @@
 {
-  "name": "build-separate",
-  "version": "0.0.1",
-  "description": "webpack分离打包",
-  "main": "index.js",
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
   "scripts": {
     "test": "test",
     "dev": "webpack-dev-server --mode development",
