@@ -1,4 +1,5 @@
 import React from 'react';
+import { getNode } from '../../utils';
 import Head from '../../images/head.png';
 
 export default class AppIndex extends React.Component {
@@ -9,23 +10,15 @@ export default class AppIndex extends React.Component {
     }
   }
   componentDidMount() {
-    const item = { title: 'ES6扩展运算符 ...' }
-    const lists = [...[{ title: 'ES6转换' }],item];
-    this.setState({ lists });
+    const node = getNode('div');
+    console.log(node)
   }
   render() {
-    const { message, lists } = this.state;
+    const { message } = this.state;
     return(
       <div>
         <h2>{ message }</h2>
         <img src={Head} />
-        <ul>
-        { 
-          lists && lists.map(item => (
-          <li>{ item.title }</li>
-          )) 
-        }
-        </ul>
       </div>
     )
   }

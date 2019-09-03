@@ -1,4 +1,5 @@
 import React from 'react';
+import { getNode } from '../../utils';
 
 export default class About extends React.Component {
   constructor(props) {
@@ -6,6 +7,9 @@ export default class About extends React.Component {
     this.state = {
       message: '我是应用的关于我们'
     }
+  }
+  componentDidMount() {
+    const node = getNode('div');
   }
   render() {
     return(

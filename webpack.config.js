@@ -48,6 +48,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     // 每次打包前删除dist文件夹
     new HtmlWebpackPlugin({
       title: '主页',
@@ -92,20 +93,4 @@ module.exports = {
       }
     }
   },
-  devServer: {
-    // 设置服务器访问的基本目录
-    contentBase: path.resolve(__dirname,'dist'), //最好设置成绝对路径
-    // 启动的服务端口
-    port: 3333,
-    // 通过localhost或IP进行访问
-    host: 'localhost',
-    // 若编译过程中有错误，显示到网页上,便于定位错误
-    overlay: {
-      errors: true,
-    },
-    //热加载
-    hot: true,
-    // 设置自动拉起浏览器
-    open:true
-  }
 }
