@@ -2,12 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const entry = require('./config/get-entry')('./src/pages');
 
 module.exports = {
   entry: entry,
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash].js',
     path: path.resolve(__dirname,'dist'),
     publicPath: './',
   },
@@ -64,10 +66,11 @@ module.exports = {
     }),
     // 提取css文件
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: 'css/[name].[hash].css',
     }),
   ],
   optimization: {
+    // 分离公共js文件
     splitChunks: {
       chunks: 'all',
       minSize: 30000,
@@ -90,7 +93,8 @@ module.exports = {
           reuseExistingChunk: true,
           name: 'utils'
         }
-      }
-    }
+      } 
+    },
+    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin({})]
   },
 }

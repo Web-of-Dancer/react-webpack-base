@@ -1,14 +1,14 @@
 {
-  "name": "{{name}}",
-  "version": "{{version}}",
-  "description": "{{description}}",
+  "name": "name",
+  "version": "0.0.2",
+  "description": "react+webpack multi page applaction",
   "scripts": {
     "dev": "webpack-dev-server --mode development --config config/webpack.dev.config.js",
     "start": "webpack-dev-server --mode development --config config/webpack.dev.config.js",
     "build": "webpack"
   },
   "keywords": [],
-  "author": "{{author}}",
+  "author": "author",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
@@ -27,7 +27,9 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "style-loader": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",

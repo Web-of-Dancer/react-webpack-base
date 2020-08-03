@@ -1,18 +1,19 @@
-# 这是一个webpack+react+less的多页应用模板
+# react+webpack multi page applaction
 > "react": "^16.9.0" "webpack": "^4.39.3"
 
-## 版本 v0.0.2
-## 安装依赖
+## Version v0.0.2
+
+## Install dependency
 ```
 npm install || npm i
-//  国内镜像使用
+// Mirror image in China
 cnpm install
 ```
-## 预览
+## Run
 ```
 npm run start || npm run dev
 ```
-## 打包
+## Build
 ```
 npm run build
 ```
