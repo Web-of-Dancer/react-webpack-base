@@ -8,8 +8,7 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "wyg",
-  "license": "ISC",
+  "author": "{{author}}",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
