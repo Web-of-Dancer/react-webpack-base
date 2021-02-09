@@ -1,14 +1,14 @@
 {
-  "name": "name",
-  "version": "0.0.2",
-  "description": "react+webpack multi page applaction",
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
   "scripts": {
     "dev": "webpack-dev-server --mode development --config config/webpack.dev.config.js",
     "start": "webpack-dev-server --mode development --config config/webpack.dev.config.js",
     "build": "webpack"
   },
   "keywords": [],
-  "author": "author",
+  "author": "{{author}}",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
